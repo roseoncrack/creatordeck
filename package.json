@@ -1,0 +1,27 @@
+{
+  "name": "creatordeck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CreatorDeck — two-sided creator sponsorship marketplace",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules .turbo",
+    "db:migrate": "pnpm --filter @creatordeck/api migrate",
+    "db:seed": "pnpm --filter @creatordeck/taxonomy seed",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@creatordeck/config",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.node.json",
+    "tsconfig.next.json",
+    "tailwind.preset.ts",
+    "eslint.base.cjs"
+  ]
+}

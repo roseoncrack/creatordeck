@@ -1,0 +1,12 @@
+{
+  "extends": "@creatordeck/config/tsconfig.node.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "noEmit": false,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}
