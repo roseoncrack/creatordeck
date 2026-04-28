@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
-import preset from "@creatordeck/config/tailwind.preset";
+// Use a local copy of the shared preset so module resolution doesn't depend
+// on a cross-package subpath (which broke under turbo prune on Vercel).
+import preset from "./tailwind.preset.local";
 import animate from "tailwindcss-animate";
 
 const config: Config = {
