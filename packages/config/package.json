@@ -3,7 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./tailwind.preset": "./tailwind.preset.ts",
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./tsconfig.node.json": "./tsconfig.node.json",
+    "./tsconfig.next.json": "./tsconfig.next.json",
+    "./eslint.base.cjs": "./eslint.base.cjs"
+  },
   "files": [
+    "index.js",
     "tsconfig.base.json",
     "tsconfig.node.json",
     "tsconfig.next.json",
