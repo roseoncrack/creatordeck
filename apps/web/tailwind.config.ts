@@ -3,7 +3,7 @@ import preset from "@creatordeck/config/tailwind.preset";
 import animate from "tailwindcss-animate";
 
 const config: Config = {
-  presets: [preset as Config],
+  presets: [preset as unknown as Config],
   darkMode: ["class"],
   content: [
     "./app/**/*.{ts,tsx}",

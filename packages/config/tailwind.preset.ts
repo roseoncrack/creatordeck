@@ -1,9 +1,9 @@
-import type { Config } from "tailwindcss";
-
 /**
  * Shared Tailwind preset. Apps extend this in their own `tailwind.config.ts`.
+ * (Type annotation removed to avoid requiring tailwindcss as a dep here;
+ *  consumers cast to Tailwind's `Config` type.)
  */
-const preset: Partial<Config> = {
+const preset = {
   darkMode: ["class"],
   theme: {
     container: {
