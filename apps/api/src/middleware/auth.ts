@@ -24,13 +24,7 @@ export interface AuthBrand {
   slug: string;
 }
 
-declare module "express-serve-static-core" {
-  interface Request {
-    user?: AuthUser;
-    brand?: AuthBrand;
-    creatorId?: string;
-  }
-}
+// Request augmentation lives in src/types/express.d.ts (global Express namespace).
 
 function extractBearer(req: Request): string | null {
   const header = req.headers.authorization;

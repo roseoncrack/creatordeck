@@ -69,6 +69,7 @@ router.post("/me/platforms", requireCreator, async (req, res, next) => {
 router.get("/:handle", optionalAuth, async (req, res, next) => {
   try {
     const handle = req.params.handle;
+    if (!handle) throw new HttpError(400, "bad_request", "handle param required");
     const profile = await getCreatorByHandle(handle);
     if (!profile) throw new HttpError(404, "not_found", "Creator not found");
     res.json({ data: profile });
